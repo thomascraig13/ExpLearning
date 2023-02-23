@@ -27,7 +27,7 @@ class Main:
         self.frame.grid_columnconfigure((2, 3), weight=0)
         self.frame.grid_rowconfigure((0, 1, 2, 3, 4, 5, 6, 7, 8, 9), weight=1)
 
-        # * INITIALIZE YOUR CLASS HERE, PASS self.frame AS YOUR WORKING SPACE
+        #* INITIALIZE YOUR CLASS HERE, PASS self.frame AS YOUR WORKING SPACE
         self.e = Example(self.frame)
         self.e_two = Example(self.frame)
 
@@ -37,7 +37,7 @@ class Main:
         #! run the Main GUI
         self.main.mainloop()
 
-    def sidebar(self, frame):  # used to interface with each GUI
+    def sidebar(self, frame):
         self.sidebar_frame = customtkinter.CTkFrame(frame, width=140, corner_radius=0)
         self.sidebar_frame.grid(row=0, column=0, rowspan=11, sticky="nsew")
         self.sidebar_frame.grid_rowconfigure(10, weight=1)
@@ -46,7 +46,7 @@ class Main:
         self.logo_label = customtkinter.CTkLabel(self.sidebar_frame, text="Top Movies by Year", font=TITLE_FONT)
         self.logo_label.grid(row=0, column=0, padx=20, pady=(20, 10))
 
-        # * CREATE YOUR BUTTON HERE, PUT BUTTON ON NEXT ROW DOWN IN GRID
+        #* CREATE YOUR BUTTON HERE, PUT BUTTON ON NEXT ROW DOWN IN GRID
         #! EXAMPLE GUI
 
         self.ex = customtkinter.CTkButton(self.sidebar_frame, text="Example", command=self.example)  #! YOU NEED TO CREATE A METHOD IN THIS FILE TO CALL YOUR GUI
@@ -80,6 +80,6 @@ class Main:
             self.e_two.gui()
 
 
-
+#! run the class
 if __name__ == "__main__":
     Main()

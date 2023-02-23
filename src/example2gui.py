@@ -1,16 +1,14 @@
 import customtkinter
 import tkinter
 
-#! IMPORT YOUR FILE AND CONSTANTS HERE
 from const import *
 from example2scraper import ExampleScraper
 
-#! THIS IS JUST AN EXAMPLE, NOT WHAT THE GUI WILL BE
+#! THIS IS JUST AN EXAMPLE
 
 class ExampleTwo:
 
     def __init__(self,frame):
-        #! LEAVE THESE 2 ATRIBUTES
         self.main = frame
         self.clicked = False
 
@@ -22,7 +20,7 @@ class ExampleTwo:
         self.locationLine = 1 
 
     def gui(self):
-        self.clicked=True #! SET TO TRUE
+        self.clicked=True
 
         #* CREATE YOUR GUI HERE, USING self.main AS YOUR FRAME THAT YOU'RE WORKING ON
         self.frame = customtkinter.CTkFrame(self.main,width=560,fg_color='transparent')
